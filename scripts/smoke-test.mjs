@@ -14,9 +14,16 @@ for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `missing required element #${id}`);
 }
 
-assert.equal((html.match(/class="step/g) || []).length, 6, "six workflow steps required");
+assert.equal(
+  (html.match(/class="step(?:\s|")/g) || []).length,
+  6,
+  "six workflow steps required"
+);
 assert.ok(script.includes('$$(".step").forEach'), "step controls must use the collection selector");
-assert.ok(!script.includes('$(".step").forEach'), "single-element selector cannot drive step collections");
+assert.ok(
+  !/(^|[^$])\$\("\.step"\)\.forEach/.test(script),
+  "single-element selector cannot drive step collections"
+);
 assert.ok(
   script.includes("$$('#rlist .actions button').forEach"),
   "review handlers must remain scoped to the review list"
