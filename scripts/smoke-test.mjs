@@ -14,6 +14,7 @@ const requiredIds = [
   , "momma", "momma-panel", "momma-progress", "momma-back", "momma-next"
   , "executive-title", "lens-tabs", "lens-panel"
   , "snapshot-status"
+  , "publication-status"
 ];
 for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `missing required element #${id}`);
@@ -66,5 +67,6 @@ for (const forbidden of ["privateKey", "apiKey", "password", "sourceText", "manu
   assert.ok(!progressText.includes(`"${forbidden}"`), `forbidden public snapshot field: ${forbidden}`);
 }
 assert.ok(script.includes("snapshot safety boundary failed"), "client must fail closed on unsafe snapshots");
+assert.ok(script.includes("human publication record failed"), "client must require a human publication record");
 
 console.log("EPU founder showcase smoke checks passed.");
