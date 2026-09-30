@@ -2,6 +2,14 @@
   "schema": "epu.public-founder-progress.v0.1",
   "classification": "PUBLIC_SANITIZED_READ_ONLY",
   "generatedAt": "2026-09-30T15:03:00-04:00",
+  "publication": {
+    "state": "PUBLISHED",
+    "approvedBy": "Sean Alan LaViscount",
+    "approvedRole": "Release governor",
+    "approvedAt": "2026-09-30T15:03:00-04:00",
+    "approvalEvidence": "GITHUB_MERGED_CHANGE",
+    "cryptographicSignature": false
+  },
   "source": {
     "repository": "Zianzia/Zianzia-tlc-sovereign-platform",
     "commit": "89e3bbf1eef7ad46a77ce1d17dc8e4dc36e33457",

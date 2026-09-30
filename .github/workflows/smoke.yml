@@ -18,3 +18,5 @@ jobs:
           node-version: 22
       - name: Validate founder workflow
         run: node scripts/smoke-test.mjs
+      - name: Validate governed public snapshot
+        run: node scripts/validate-founder-progress.mjs
