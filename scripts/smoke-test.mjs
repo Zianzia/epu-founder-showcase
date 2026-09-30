@@ -10,6 +10,7 @@ const requiredIds = [
   "health", "stageguide", "domain", "file", "text", "parse", "demo-source",
   "ecat", "elist", "rcat", "rlist", "completion", "export", "vfile", "inspect"
   , "momma", "momma-panel", "momma-progress", "momma-back", "momma-next"
+  , "executive-title", "lens-tabs", "lens-panel"
 ];
 for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `missing required element #${id}`);
@@ -48,5 +49,10 @@ assert.ok(script.includes("const MOMMA_STEPS="), "guided MOMMA experience must r
 assert.ok(script.includes("MOMMA can help. She cannot take over."), "advisory boundary must be explained plainly");
 assert.ok(script.includes("Public-safe boundary present"), "public safety result must remain visible");
 assert.ok(script.includes("cannot manufacture authority"), "MOMMA cannot claim authority");
+assert.ok(script.includes("const FOUNDER_LENSES="), "founder executive lenses must remain available");
+for (const lens of ["today", "protected", "unfinished", "founders"]) {
+  assert.ok(html.includes(`data-lens="${lens}"`), `missing founder lens: ${lens}`);
+}
+assert.ok(script.includes("Absence is not treated as consent."), "founder inactivity cannot imply consent");
 
 console.log("EPU founder showcase smoke checks passed.");
