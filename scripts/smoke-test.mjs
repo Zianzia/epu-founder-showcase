@@ -2,6 +2,8 @@ import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 
 const html = readFileSync("index.html", "utf8");
+const progressText = readFileSync("data/founder-progress.json", "utf8");
+const progress = JSON.parse(progressText);
 const script = html.match(/<script>([\s\S]*)<\/script>/)?.[1];
 assert.ok(script, "inline application script must exist");
 assert.doesNotThrow(() => new Function(script), "application JavaScript must parse");
@@ -11,6 +13,7 @@ const requiredIds = [
   "ecat", "elist", "rcat", "rlist", "completion", "export", "vfile", "inspect"
   , "momma", "momma-panel", "momma-progress", "momma-back", "momma-next"
   , "executive-title", "lens-tabs", "lens-panel"
+  , "snapshot-status"
 ];
 for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `missing required element #${id}`);
@@ -54,5 +57,14 @@ for (const lens of ["today", "protected", "unfinished", "founders"]) {
   assert.ok(html.includes(`data-lens="${lens}"`), `missing founder lens: ${lens}`);
 }
 assert.ok(script.includes("Absence is not treated as consent."), "founder inactivity cannot imply consent");
+assert.equal(progress.schema, "epu.public-founder-progress.v0.1");
+assert.equal(progress.classification, "PUBLIC_SANITIZED_READ_ONLY");
+for (const boundary of ["NO_MANUSCRIPTS", "NO_SOURCE_TEXT", "NO_CREDENTIALS", "NO_PRIVATE_EVIDENCE", "NO_WRITE_AUTHORITY", "NOT_CANON_APPROVAL", "NOT_CORPORATE_APPROVAL"]) {
+  assert.ok(progress.claimsBoundary.includes(boundary), `missing snapshot boundary: ${boundary}`);
+}
+for (const forbidden of ["privateKey", "apiKey", "password", "sourceText", "manuscriptText", "credential"]) {
+  assert.ok(!progressText.includes(`"${forbidden}"`), `forbidden public snapshot field: ${forbidden}`);
+}
+assert.ok(script.includes("snapshot safety boundary failed"), "client must fail closed on unsafe snapshots");
 
 console.log("EPU founder showcase smoke checks passed.");
