@@ -11,3 +11,14 @@ MOMMA is advisory only and cannot manufacture truth, authority, ownership, or ca
 The public showcase includes a plain-language, mobile-responsive **Meet MOMMA** walkthrough. It explains the Paradigm/Paradox boundary, demonstrates supported, contradicted, and unresolved claims, identifies what MOMMA can and cannot do, and shows the practical protection for TLC and its creators.
 
 The walkthrough uses public-safe examples only. It is read-only and cannot establish truth, ownership, permission, corporate approval, creator authority, or canon. Technical proof services remain private.
+
+## Founder executive view
+
+The homepage answers four operational questions without requiring technical knowledge:
+
+- what works today;
+- what is protected;
+- what remains unfinished;
+- what each founder’s participation would unlock.
+
+The view distinguishes demonstrated public capability from private production controls and future work. Reserved creator spaces remain inactive until the proper person participates; absence is never treated as consent.
