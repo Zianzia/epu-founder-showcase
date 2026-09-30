@@ -1,0 +1,66 @@
+{
+  "schema": "epu.public-founder-progress.v0.1",
+  "classification": "PUBLIC_SANITIZED_READ_ONLY",
+  "generatedAt": "2026-09-30T15:03:00-04:00",
+  "source": {
+    "repository": "Zianzia/Zianzia-tlc-sovereign-platform",
+    "commit": "89e3bbf1eef7ad46a77ce1d17dc8e4dc36e33457",
+    "exportMode": "MANUAL_SANITIZED_SNAPSHOT"
+  },
+  "claimsBoundary": [
+    "NO_MANUSCRIPTS",
+    "NO_SOURCE_TEXT",
+    "NO_CREDENTIALS",
+    "NO_PRIVATE_EVIDENCE",
+    "NO_WRITE_AUTHORITY",
+    "NOT_CANON_APPROVAL",
+    "NOT_CORPORATE_APPROVAL"
+  ],
+  "headline": {
+    "status": "ACTIVE_PROTOTYPE",
+    "plainLanguage": "The public demonstration works now. Private governed services continue to be built and hardened.",
+    "nextConnection": "Read-only progress snapshots from the private platform"
+  },
+  "lenses": {
+    "today": {
+      "summary": "The showcase is already a working instrument—not a slideshow. This snapshot was deliberately reduced to public-safe capability states.",
+      "cards": [
+        ["Guided MOMMA", "Live public explanation of evidence, lore, conflict, uncertainty, and human authority."],
+        ["Local workspace", "Browser-local document organization and review without automatic source transmission."],
+        ["Operator cadence", "The private platform records a working Monday, Wednesday, and Friday Customer Zero operating rhythm."],
+        ["Portable inspection", "The showcase exports review packages and checks content and source fingerprints."]
+      ],
+      "note": "Current public value: explanation, local organization, review discipline, and demonstrable protection. Production authority remains private."
+    },
+    "protected": {
+      "summary": "Only approved progress descriptions cross this boundary. Content and authority remain on the private side.",
+      "cards": [
+        ["Domain separation", "Paradigm evidence and Paradox lore remain distinct."],
+        ["Creator jurisdiction", "Reserved creator spaces cannot be activated publicly or by MOMMA."],
+        ["Advisory MOMMA", "Analysis cannot approve itself or become an enforceable decision."],
+        ["Private material", "Manuscripts, source text, credentials, private evidence, and governed writes are excluded."]
+      ],
+      "note": "This snapshot has no write path back into the private platform."
+    },
+    "unfinished": {
+      "summary": "The public interface is useful, but it is not the completed production platform.",
+      "cards": [
+        ["Automated publishing", "Snapshots are manually sanitized until a separately authorized release workflow exists."],
+        ["Production identity", "Founder and creator authentication, recovery, and role administration require secure integration."],
+        ["Key custody", "Production signatures require protected keys, rotation, and compromise procedures."],
+        ["Operational scale", "Managed storage, backups, monitoring, accessibility review, and security testing remain ahead."]
+      ],
+      "note": "These are declared construction gates. The snapshot must fail closed if its schema or public-safety classification changes."
+    },
+    "founders": {
+      "summary": "Participation adds legitimate knowledge and authority; it does not surrender ownership or creator jurisdiction.",
+      "cards": [
+        ["Sean · active build", "Continues the EPU operating model, platform reconstruction, and demonstrable workflows."],
+        ["Hadari · when ready", "Can review Alpha transition proposals and activate the reserved Sigmus space within documented scope."],
+        ["Bomani · when ready", "Can activate the reserved Axiom Epoch space and control creator-dependent decisions."],
+        ["Omari · defined scope", "Can inspect attributed framework contributions and confirm the intended corporate or review role."]
+      ],
+      "note": "Reserved spaces remain inactive. Absence is not treated as consent."
+    }
+  }
+}
