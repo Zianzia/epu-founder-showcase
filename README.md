@@ -22,3 +22,9 @@ The homepage answers four operational questions without requiring technical know
 - what each founder’s participation would unlock.
 
 The view distinguishes demonstrated public capability from private production controls and future work. Reserved creator spaces remain inactive until the proper person participates; absence is never treated as consent.
+
+## Sanitized progress snapshot
+
+The executive view reads `data/founder-progress.json`, a public, read-only snapshot with a strict claims boundary. It contains capability descriptions, construction gates, and participation dependencies only.
+
+The snapshot excludes manuscripts, source text, credentials, private evidence, and write authority. The browser rejects a snapshot whose schema, classification, required safety declarations, or lens structure changes. If loading fails, the dashboard falls back to its built-in public summary.
