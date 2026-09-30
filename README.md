@@ -28,3 +28,5 @@ The view distinguishes demonstrated public capability from private production co
 The executive view reads `data/founder-progress.json`, a public, read-only snapshot with a strict claims boundary. It contains capability descriptions, construction gates, and participation dependencies only.
 
 The snapshot excludes manuscripts, source text, credentials, private evidence, and write authority. The browser rejects a snapshot whose schema, classification, required safety declarations, or lens structure changes. If loading fails, the dashboard falls back to its built-in public summary.
+
+Every displayed snapshot must also contain a human publication record and pass the repository validator. MOMMA may prepare or critique a draft, but cannot approve or publish it. See [Founder progress publication](docs/FOUNDER_PROGRESS_PUBLICATION.md).
