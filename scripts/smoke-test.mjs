@@ -9,6 +9,7 @@ assert.doesNotThrow(() => new Function(script), "application JavaScript must par
 const requiredIds = [
   "health", "stageguide", "domain", "file", "text", "parse", "demo-source",
   "ecat", "elist", "rcat", "rlist", "completion", "export", "vfile", "inspect"
+  , "momma", "momma-panel", "momma-progress", "momma-back", "momma-next"
 ];
 for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `missing required element #${id}`);
@@ -42,5 +43,10 @@ for (const category of ["entities", "relationships", "events", "contradictions",
 assert.ok(script.includes("function reviewStats()"), "review completion accounting required");
 assert.ok(script.includes("function selfCheck()"), "browser startup self-check required");
 assert.ok(html.includes("not automatic truth or canon"), "claims boundary must remain visible");
+assert.ok(html.includes("Meet MOMMA"), "founder entry point must remain visible");
+assert.ok(script.includes("const MOMMA_STEPS="), "guided MOMMA experience must remain available");
+assert.ok(script.includes("MOMMA can help. She cannot take over."), "advisory boundary must be explained plainly");
+assert.ok(script.includes("Public-safe boundary present"), "public safety result must remain visible");
+assert.ok(script.includes("cannot manufacture authority"), "MOMMA cannot claim authority");
 
 console.log("EPU founder showcase smoke checks passed.");
