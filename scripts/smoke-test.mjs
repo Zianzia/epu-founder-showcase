@@ -4,9 +4,11 @@ import assert from "node:assert/strict";
 const html = readFileSync("index.html", "utf8");
 const progressText = readFileSync("data/founder-progress.json", "utf8");
 const progress = JSON.parse(progressText);
-const script = html.match(/<script>([\s\S]*)<\/script>/)?.[1];
+const script = html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+const visualScript = readFileSync("visual-studio.js", "utf8");
 assert.ok(script, "inline application script must exist");
 assert.doesNotThrow(() => new Function(script), "application JavaScript must parse");
+assert.doesNotThrow(() => new Function(visualScript), "visual studio JavaScript must parse");
 
 const requiredIds = [
   "health", "stageguide", "domain", "file", "text", "parse", "demo-source",
@@ -21,7 +23,7 @@ for (const id of requiredIds) {
 }
 
 assert.equal(
-  (html.match(/class="step(?:\s|")/g) || []).length,
+  (html.match(/<button class="step(?:\s|")/g) || []).length,
   6,
   "six workflow steps required"
 );
@@ -40,7 +42,7 @@ assert.ok(
 );
 for (const category of ["entities", "relationships", "events", "contradictions", "questions"]) {
   assert.equal(
-    (html.match(new RegExp(`<option(?: value="${category}")?>[^<]+<\\/option>`, "g")) || []).length,
+    (html.match(new RegExp(`<option value="${category}">[^<]+<\\/option>`, "g")) || []).length,
     2,
     `${category} must be available in extraction and review`
   );
@@ -115,5 +117,18 @@ assert.ok(script.includes("function wbFindingRanges(text)"), "MOMMA findings mus
 assert.ok(script.includes("function wbActivateFinding(f)"), "inline findings must select the exact source wording for correction");
 assert.ok(script.includes("This is an advisory marker"), "inline findings must preserve MOMMA's advisory boundary");
 assert.ok(script.includes("Show MOMMA marks") && script.includes("Edit document"), "authors must be able to enter and leave the annotation view");
+
+for (const id of ["visual", "vs-character", "vs-controller", "vs-concepts", "vs-gallery", "vs-build-brief", "vs-candidate", "vs-canon-status", "vs-commercial-status", "vs-reviewer", "vs-export", "vs-import"]) {
+  assert.ok(html.includes(`id="${id}"`), `visual studio is missing #${id}`);
+}
+assert.ok(existsSync("visual-studio.css"), "visual studio stylesheet must exist");
+assert.ok(html.includes("Renderer status: not connected."), "the UI must not imply a renderer is connected");
+assert.ok(html.includes("Leonardo da Vinci"), "the foundational visual method must remain visible");
+assert.ok(visualScript.includes("epu-visual-studio"), "visual identity records must persist locally");
+for (const boundary of ["MOMMA_ADVISORY_ONLY", "HUMAN_CANON_APPROVAL_REQUIRED", "VISUAL_MATCH_NOT_OWNERSHIP", "COMMERCIAL_CLEARANCE_SEPARATE", "LOCAL_DEVICE_ONLY", "RENDERER_NOT_CONNECTED"]) {
+  assert.ok(visualScript.includes(boundary), `visual package boundary missing: ${boundary}`);
+}
+assert.ok(visualScript.includes("Approved status requires a named human reviewer"), "MOMMA must not approve visual canon");
+assert.ok(html.includes("Creative / canon disposition") && html.includes("Commercial disposition"), "canon and commercial clearance must remain separate");
 
 console.log("EPU founder showcase smoke checks passed.");
