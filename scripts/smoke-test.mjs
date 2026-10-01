@@ -40,14 +40,14 @@ assert.ok(
 );
 for (const category of ["entities", "relationships", "events", "contradictions", "questions"]) {
   assert.equal(
-    (html.match(new RegExp(`<option>${category}<\\/option>`, "g")) || []).length,
+    (html.match(new RegExp(`<option(?: value="${category}")?>[^<]+<\\/option>`, "g")) || []).length,
     2,
     `${category} must be available in extraction and review`
   );
 }
 assert.ok(script.includes("function reviewStats()"), "review completion accounting required");
 assert.ok(script.includes("function selfCheck()"), "browser startup self-check required");
-assert.ok(html.includes("not automatic truth or canon"), "claims boundary must remain visible");
+assert.ok(html.includes("cannot establish truth, ownership, consent, authority, or canon"), "claims boundary must remain visible");
 assert.ok(html.includes("Meet MOMMA"), "founder entry point must remain visible");
 assert.ok(script.includes("const MOMMA_STEPS="), "guided MOMMA experience must remain available");
 assert.ok(script.includes("MOMMA can help. She cannot take over."), "advisory boundary must be explained plainly");
@@ -69,5 +69,11 @@ for (const forbidden of ["privateKey", "apiKey", "password", "sourceText", "manu
 assert.ok(script.includes("snapshot safety boundary failed"), "client must fail closed on unsafe snapshots");
 assert.ok(script.includes("human publication record failed"), "client must require a human publication record");
 assert.ok(script.includes('renderLens("progress")'), "progress since last update must be the default founder view");
+assert.ok(html.includes("YOUR STORY FIRST"), "creative-first welcome must be visible");
+assert.ok(html.includes("Why there are checkboxes here"), "name grouping controls must explain their purpose");
+for (const label of ["Use this", "Set aside", "Ask the creator", "Ignore"]) {
+  assert.ok(script.includes(label), `creator-friendly choice missing: ${label}`);
+}
+assert.ok(html.includes("Advanced MOMMA analysis import"), "technical bridge must remain available but optional");
 
 console.log("EPU founder showcase smoke checks passed.");
