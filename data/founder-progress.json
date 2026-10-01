@@ -1,12 +1,12 @@
 {
   "schema": "epu.public-founder-progress.v0.1",
   "classification": "PUBLIC_SANITIZED_READ_ONLY",
-  "generatedAt": "2026-09-30T15:03:00-04:00",
+  "generatedAt": "2026-09-30T20:10:00-04:00",
   "publication": {
     "state": "PUBLISHED",
     "approvedBy": "Sean Alan LaViscount",
     "approvedRole": "Release governor",
-    "approvedAt": "2026-09-30T15:03:00-04:00",
+    "approvedAt": "2026-09-30T20:10:00-04:00",
     "approvalEvidence": "GITHUB_MERGED_CHANGE",
     "cryptographicSignature": false
   },
@@ -30,6 +30,16 @@
     "nextConnection": "Read-only progress snapshots from the private platform"
   },
   "lenses": {
+    "progress": {
+      "summary": "Since the previous public release, the showcase gained a governed way to prove that progress is real, reviewed, and safe to disclose.",
+      "cards": [
+        ["Completed", "A human-approved, read-only progress snapshot now drives the founder dashboard."],
+        ["Protection added", "Unsafe, malformed, or unapproved snapshots are rejected before display."],
+        ["Still dependent", "Production identity, protected key custody, monitoring, and direct private-service integration remain unfinished."],
+        ["Next milestone", "Publish a second independently reviewed snapshot so founders can compare change across releases instead of trusting a static claim."]
+      ],
+      "note": "This release improves transparency and publication control. It does not claim new canon, creator consent, revenue, or production readiness."
+    },
     "today": {
       "summary": "The showcase is already a working instrument—not a slideshow. This snapshot was deliberately reduced to public-safe capability states.",
       "cards": [
@@ -53,7 +63,7 @@
     "unfinished": {
       "summary": "The public interface is useful, but it is not the completed production platform.",
       "cards": [
-        ["Automated publishing", "Snapshots are manually sanitized until a separately authorized release workflow exists."],
+        ["Snapshot freshness", "Publication is governed, but each update is still deliberately reviewed and published rather than automatically exposed."],
         ["Production identity", "Founder and creator authentication, recovery, and role administration require secure integration."],
         ["Key custody", "Production signatures require protected keys, rotation, and compromise procedures."],
         ["Operational scale", "Managed storage, backups, monitoring, accessibility review, and security testing remain ahead."]
