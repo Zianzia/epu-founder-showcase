@@ -95,5 +95,9 @@ assert.ok(script.includes("function wbFacts(text)"), "fresh local MOMMA review m
 assert.ok(script.includes("HUMAN_APPLIED_REVISIONS"), "review history must distinguish human-applied changes");
 assert.ok(html.includes("full generative MOMMA conversation requires the future secure private model gateway"), "public local reasoning limit must remain visible");
 assert.ok(html.includes("Advanced evidence review and portable package"), "existing evidence workflow must remain available as an advanced layer");
+assert.ok(script.includes('wbDiscard.id="wb-discard"'), "workspace must expose a complete-review discard control");
+assert.ok(script.includes("Discard this entire local review?"), "discarding a review must require explicit confirmation");
+assert.ok(script.includes("Workspace refreshed."), "discard must report a clean workspace");
+assert.ok(script.includes('WB.original=""') && script.includes('WB.revisions=[]') && script.includes('S={src:null'), "discard must clear both creative and advanced review state");
 
 console.log("EPU founder showcase smoke checks passed.");
