@@ -130,5 +130,11 @@ for (const boundary of ["MOMMA_ADVISORY_ONLY", "HUMAN_CANON_APPROVAL_REQUIRED", 
 }
 assert.ok(visualScript.includes("Approved status requires a named human reviewer"), "MOMMA must not approve visual canon");
 assert.ok(html.includes("Creative / canon disposition") && html.includes("Commercial disposition"), "canon and commercial clearance must remain separate");
+assert.ok(visualScript.includes("identity_anchor") && visualScript.includes("creatorConfirmed"), "visual canon must require a creator-confirmed identity anchor");
+for (const role of ["costume", "anatomy", "movement", "environment", "mood", "exclude"]) {
+  assert.ok(visualScript.includes(`'${role}'`), `missing bounded visual reference role: ${role}`);
+}
+assert.ok(visualScript.includes("Supporting references govern only their named role"), "supporting art must not silently redefine identity");
+assert.ok(visualScript.includes("#vs-readiness"), "visual lock readiness must remain visible");
 
 console.log("EPU founder showcase smoke checks passed.");
