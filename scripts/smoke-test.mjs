@@ -84,5 +84,7 @@ assert.ok(html.includes("OpenAI / ChatGPT"), "concept-art creative engine attrib
 assert.ok(script.includes("Protected · not yet activated"), "unconstructed creator spaces must remain protected");
 assert.ok(script.includes("Enter truth and evidence"), "Paradigm lane must remain distinct");
 assert.ok(script.includes("Enter stories and lore"), "Paradox lane must remain distinct");
+assert.ok(html.includes(".gateway-fallback,#domain-panel+.grid{display:none}"), "duplicate gateway controls and shortcut cards must stay visually removed");
+assert.ok(html.includes("background:transparent;color:transparent;box-shadow:none"), "portal hit regions must not cover or distort the artwork");
 
 console.log("EPU founder showcase smoke checks passed.");
