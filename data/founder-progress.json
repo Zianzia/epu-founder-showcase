@@ -1,18 +1,18 @@
 {
   "schema": "epu.public-founder-progress.v0.1",
   "classification": "PUBLIC_SANITIZED_READ_ONLY",
-  "generatedAt": "2026-09-30T20:10:00-04:00",
+  "generatedAt": "2026-09-30T20:20:00-04:00",
   "publication": {
     "state": "PUBLISHED",
     "approvedBy": "Sean Alan LaViscount",
     "approvedRole": "Release governor",
-    "approvedAt": "2026-09-30T20:10:00-04:00",
+    "approvedAt": "2026-09-30T20:20:00-04:00",
     "approvalEvidence": "GITHUB_MERGED_CHANGE",
     "cryptographicSignature": false
   },
   "source": {
     "repository": "Zianzia/Zianzia-tlc-sovereign-platform",
-    "commit": "89e3bbf1eef7ad46a77ce1d17dc8e4dc36e33457",
+    "commit": "6e71ec3ba3b78e62b8c5ebe8d0be5d69428f63e9",
     "exportMode": "MANUAL_SANITIZED_SNAPSHOT"
   },
   "claimsBoundary": [
@@ -31,52 +31,112 @@
   },
   "lenses": {
     "progress": {
-      "summary": "Since the previous public release, the showcase gained a governed way to prove that progress is real, reviewed, and safe to disclose.",
+      "summary": "The private platform advanced beyond the previous source commit: it now enforces the same release-to-release progress structure used by this founder dashboard.",
       "cards": [
-        ["Completed", "A human-approved, read-only progress snapshot now drives the founder dashboard."],
-        ["Protection added", "Unsafe, malformed, or unapproved snapshots are rejected before display."],
-        ["Still dependent", "Production identity, protected key custody, monitoring, and direct private-service integration remain unfinished."],
-        ["Next milestone", "Publish a second independently reviewed snapshot so founders can compare change across releases instead of trusting a static claim."]
+        [
+          "Completed",
+          "The private exporter now requires a public-safe progress comparison alongside every established founder lens."
+        ],
+        [
+          "Protection added",
+          "A missing progress lens fails validation, while publication remains a separate human-controlled action."
+        ],
+        [
+          "Still dependent",
+          "The exporter validates approved input; it does not yet derive a complete public summary automatically from live governed Corporate OS records."
+        ],
+        [
+          "Next milestone",
+          "Generate a candidate comparison from governed operating records, then require human review before any public merge."
+        ]
       ],
-      "note": "This release improves transparency and publication control. It does not claim new canon, creator consent, revenue, or production readiness."
+      "note": "Verified platform delta: export-contract alignment and negative-test coverage. This does not claim new canon, creator consent, revenue, or production readiness."
     },
     "today": {
       "summary": "The showcase is already a working instrument—not a slideshow. This snapshot was deliberately reduced to public-safe capability states.",
       "cards": [
-        ["Guided MOMMA", "Live public explanation of evidence, lore, conflict, uncertainty, and human authority."],
-        ["Local workspace", "Browser-local document organization and review without automatic source transmission."],
-        ["Operator cadence", "The private platform records a working Monday, Wednesday, and Friday Customer Zero operating rhythm."],
-        ["Portable inspection", "The showcase exports review packages and checks content and source fingerprints."]
+        [
+          "Guided MOMMA",
+          "Live public explanation of evidence, lore, conflict, uncertainty, and human authority."
+        ],
+        [
+          "Local workspace",
+          "Browser-local document organization and review without automatic source transmission."
+        ],
+        [
+          "Operator cadence",
+          "The private platform records a working Monday, Wednesday, and Friday Customer Zero operating rhythm."
+        ],
+        [
+          "Portable inspection",
+          "The showcase exports review packages and checks content and source fingerprints."
+        ]
       ],
       "note": "Current public value: explanation, local organization, review discipline, and demonstrable protection. Production authority remains private."
     },
     "protected": {
       "summary": "Only approved progress descriptions cross this boundary. Content and authority remain on the private side.",
       "cards": [
-        ["Domain separation", "Paradigm evidence and Paradox lore remain distinct."],
-        ["Creator jurisdiction", "Reserved creator spaces cannot be activated publicly or by MOMMA."],
-        ["Advisory MOMMA", "Analysis cannot approve itself or become an enforceable decision."],
-        ["Private material", "Manuscripts, source text, credentials, private evidence, and governed writes are excluded."]
+        [
+          "Domain separation",
+          "Paradigm evidence and Paradox lore remain distinct."
+        ],
+        [
+          "Creator jurisdiction",
+          "Reserved creator spaces cannot be activated publicly or by MOMMA."
+        ],
+        [
+          "Advisory MOMMA",
+          "Analysis cannot approve itself or become an enforceable decision."
+        ],
+        [
+          "Private material",
+          "Manuscripts, source text, credentials, private evidence, and governed writes are excluded."
+        ]
       ],
       "note": "This snapshot has no write path back into the private platform."
     },
     "unfinished": {
       "summary": "The public interface is useful, but it is not the completed production platform.",
       "cards": [
-        ["Snapshot freshness", "Publication is governed, but each update is still deliberately reviewed and published rather than automatically exposed."],
-        ["Production identity", "Founder and creator authentication, recovery, and role administration require secure integration."],
-        ["Key custody", "Production signatures require protected keys, rotation, and compromise procedures."],
-        ["Operational scale", "Managed storage, backups, monitoring, accessibility review, and security testing remain ahead."]
+        [
+          "Snapshot freshness",
+          "Publication is governed, but each update is still deliberately reviewed and published rather than automatically exposed."
+        ],
+        [
+          "Production identity",
+          "Founder and creator authentication, recovery, and role administration require secure integration."
+        ],
+        [
+          "Key custody",
+          "Production signatures require protected keys, rotation, and compromise procedures."
+        ],
+        [
+          "Operational scale",
+          "Managed storage, backups, monitoring, accessibility review, and security testing remain ahead."
+        ]
       ],
       "note": "These are declared construction gates. The snapshot must fail closed if its schema or public-safety classification changes."
     },
     "founders": {
       "summary": "Participation adds legitimate knowledge and authority; it does not surrender ownership or creator jurisdiction.",
       "cards": [
-        ["Sean · active build", "Continues the EPU operating model, platform reconstruction, and demonstrable workflows."],
-        ["Hadari · when ready", "Can review Alpha transition proposals and activate the reserved Sigmus space within documented scope."],
-        ["Bomani · when ready", "Can activate the reserved Axiom Epoch space and control creator-dependent decisions."],
-        ["Omari · defined scope", "Can inspect attributed framework contributions and confirm the intended corporate or review role."]
+        [
+          "Sean · active build",
+          "Continues the EPU operating model, platform reconstruction, and demonstrable workflows."
+        ],
+        [
+          "Hadari · when ready",
+          "Can review Alpha transition proposals and activate the reserved Sigmus space within documented scope."
+        ],
+        [
+          "Bomani · when ready",
+          "Can activate the reserved Axiom Epoch space and control creator-dependent decisions."
+        ],
+        [
+          "Omari · defined scope",
+          "Can inspect attributed framework contributions and confirm the intended corporate or review role."
+        ]
       ],
       "note": "Reserved spaces remain inactive. Absence is not treated as consent."
     }
