@@ -1,18 +1,18 @@
 {
   "schema": "epu.public-founder-progress.v0.1",
   "classification": "PUBLIC_SANITIZED_READ_ONLY",
-  "generatedAt": "2026-09-30T20:20:00-04:00",
+  "generatedAt": "2026-09-30T20:30:00-04:00",
   "publication": {
     "state": "PUBLISHED",
     "approvedBy": "Sean Alan LaViscount",
     "approvedRole": "Release governor",
-    "approvedAt": "2026-09-30T20:20:00-04:00",
+    "approvedAt": "2026-09-30T20:30:00-04:00",
     "approvalEvidence": "GITHUB_MERGED_CHANGE",
     "cryptographicSignature": false
   },
   "source": {
     "repository": "Zianzia/Zianzia-tlc-sovereign-platform",
-    "commit": "6e71ec3ba3b78e62b8c5ebe8d0be5d69428f63e9",
+    "commit": "b43835f3675e1cf0d55deb159d0ebcf90e2f770e",
     "exportMode": "MANUAL_SANITIZED_SNAPSHOT"
   },
   "claimsBoundary": [
@@ -31,26 +31,26 @@
   },
   "lenses": {
     "progress": {
-      "summary": "The private platform advanced beyond the previous source commit: it now enforces the same release-to-release progress structure used by this founder dashboard.",
+      "summary": "The private platform can now derive a human-review founder-progress candidate from aggregate governed Corporate OS state.",
       "cards": [
         [
           "Completed",
-          "The private exporter now requires a public-safe progress comparison alongside every established founder lens."
+          "A tested generator now converts current Corporate OS state into public-safe aggregate counts and review language."
         ],
         [
           "Protection added",
-          "A missing progress lens fails validation, while publication remains a separate human-controlled action."
+          "Record identifiers, titles, summaries, owners, deadlines, dependencies, evidence references, receipts, keys, and workspace content are excluded."
         ],
         [
           "Still dependent",
-          "The exporter validates approved input; it does not yet derive a complete public summary automatically from live governed Corporate OS records."
+          "No aggregate operating baseline is claimed here because the private .tlc-ops workspace is deliberately absent from GitHub."
         ],
         [
           "Next milestone",
-          "Generate a candidate comparison from governed operating records, then require human review before any public merge."
+          "Run the generator where the governed workspace exists, review the resulting baseline, and separately authorize its first public release."
         ]
       ],
-      "note": "Verified platform delta: export-contract alignment and negative-test coverage. This does not claim new canon, creator consent, revenue, or production readiness."
+      "note": "Verified platform delta: aggregate candidate generation with optional prior-baseline comparison. Generation remains review-only and cannot publish itself."
     },
     "today": {
       "summary": "The showcase is already a working instrument—not a slideshow. This snapshot was deliberately reduced to public-safe capability states.",
