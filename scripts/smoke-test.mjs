@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 
 const html = readFileSync("index.html", "utf8");
@@ -47,7 +47,7 @@ for (const category of ["entities", "relationships", "events", "contradictions",
 }
 assert.ok(script.includes("function reviewStats()"), "review completion accounting required");
 assert.ok(script.includes("function selfCheck()"), "browser startup self-check required");
-assert.ok(html.includes("cannot establish truth, ownership, consent, authority, or canon"), "claims boundary must remain visible");
+assert.ok(html.includes("does not transfer ownership, establish consent, or grant canon authority"), "claims boundary must remain visible");
 assert.ok(html.includes("Meet MOMMA"), "founder entry point must remain visible");
 assert.ok(script.includes("const MOMMA_STEPS="), "guided MOMMA experience must remain available");
 assert.ok(script.includes("MOMMA can help. She cannot take over."), "advisory boundary must be explained plainly");
@@ -69,11 +69,20 @@ for (const forbidden of ["privateKey", "apiKey", "password", "sourceText", "manu
 assert.ok(script.includes("snapshot safety boundary failed"), "client must fail closed on unsafe snapshots");
 assert.ok(script.includes("human publication record failed"), "client must require a human publication record");
 assert.ok(script.includes('renderLens("progress")'), "progress since last update must be the default founder view");
-assert.ok(html.includes("YOUR STORY FIRST"), "creative-first welcome must be visible");
+assert.ok(html.includes("Choose your <em>threshold.</em>"), "mythic gateway welcome must be visible");
 assert.ok(html.includes("Why there are checkboxes here"), "name grouping controls must explain their purpose");
 for (const label of ["Use this", "Set aside", "Ask the creator", "Ignore"]) {
   assert.ok(script.includes(label), `creator-friendly choice missing: ${label}`);
 }
 assert.ok(html.includes("Advanced MOMMA analysis import"), "technical bridge must remain available but optional");
+assert.ok(existsSync("assets/alpha-supremica-omniverse-gateway.webp"), "mythic gateway artwork must exist");
+for (const domain of ["alpha", "epu", "axiom", "sigmus"]) {
+  assert.ok(html.includes(`data-domain="${domain}"`), `missing universal gateway: ${domain}`);
+}
+assert.ok(script.includes("const DOMAIN_GATEWAYS="), "universal gateways must have bounded domain descriptions");
+assert.ok(html.includes("OpenAI / ChatGPT"), "concept-art creative engine attribution must remain visible");
+assert.ok(script.includes("Protected · not yet activated"), "unconstructed creator spaces must remain protected");
+assert.ok(script.includes("Enter truth and evidence"), "Paradigm lane must remain distinct");
+assert.ok(script.includes("Enter stories and lore"), "Paradox lane must remain distinct");
 
 console.log("EPU founder showcase smoke checks passed.");

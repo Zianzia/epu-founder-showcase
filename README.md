@@ -6,6 +6,14 @@ The operational platform, manuscripts, credentials, governed write services, and
 
 MOMMA is advisory only and cannot manufacture truth, authority, ownership, or canon.
 
+## Universal gateway artwork
+
+The homepage uses `assets/alpha-supremica-omniverse-gateway.webp` as an accessible visual threshold into Alpha Supremica, Epos Paradigm / Paradox, Axiom Epoch, and Sigmus Supremica.
+
+The original concept artwork was generated with OpenAI / ChatGPT under the creative direction of Sean Alan LaViscount. It is used for demonstration and navigation and is not offered for sale. Interactive labels and authority boundaries are rendered as HTML rather than embedded into the image, allowing the interface to remain accessible and the domain descriptions to evolve without altering the source artwork.
+
+The EPU gateway deliberately separates Epos Paradigm (truth and evidence) from the Epos Paradox pocket universe (fiction and lore). Axiom Epoch and Sigmus Supremica remain protected, inactive spaces until their controlling creators participate.
+
 ## Guided MOMMA founder experience
 
 The public showcase includes a plain-language, mobile-responsive **Meet MOMMA** walkthrough. It explains the Paradigm/Paradox boundary, demonstrates supported, contradicted, and unresolved claims, identifies what MOMMA can and cannot do, and shows the practical protection for TLC and its creators.
