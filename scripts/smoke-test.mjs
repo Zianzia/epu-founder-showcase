@@ -108,5 +108,12 @@ assert.ok(script.includes("LOCAL_DEVICE_ONLY"), "project packages must declare t
 assert.ok(script.includes("Permanently delete the locally saved project"), "saved-project deletion must require explicit confirmation");
 assert.ok(script.includes("Saved projects remain available"), "discarding an active review must not silently delete saved projects");
 assert.ok(script.includes("Unsupported project structure"), "imported projects must be validated before use");
+for (const id of ["wb-annotations", "wb-mark-legend", "wb-toggle-marks", "wb-active-finding"]) {
+  assert.ok(script.includes(`id=\"${id}\"`), `inline MOMMA findings are missing #${id}`);
+}
+assert.ok(script.includes("function wbFindingRanges(text)"), "MOMMA findings must retain exact document ranges");
+assert.ok(script.includes("function wbActivateFinding(f)"), "inline findings must select the exact source wording for correction");
+assert.ok(script.includes("This is an advisory marker"), "inline findings must preserve MOMMA's advisory boundary");
+assert.ok(script.includes("Show MOMMA marks") && script.includes("Edit document"), "authors must be able to enter and leave the annotation view");
 
 console.log("EPU founder showcase smoke checks passed.");
