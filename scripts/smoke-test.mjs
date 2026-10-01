@@ -99,5 +99,14 @@ assert.ok(script.includes('wbDiscard.id="wb-discard"'), "workspace must expose a
 assert.ok(script.includes("Discard this entire local review?"), "discarding a review must require explicit confirmation");
 assert.ok(script.includes("Workspace refreshed."), "discard must report a clean workspace");
 assert.ok(script.includes('WB.original=""') && script.includes('WB.revisions=[]') && script.includes('S={src:null'), "discard must clear both creative and advanced review state");
+for (const id of ["project-name", "project-list", "project-autosave", "project-save", "project-load", "project-checkpoint", "project-duplicate", "project-export", "project-import", "project-delete"]) {
+  assert.ok(script.includes(`id="${id}"`), `local project library is missing #${id}`);
+}
+assert.ok(script.includes('indexedDB.open(PROJECT_DB,1)'), "project recovery must use browser-local IndexedDB");
+assert.ok(script.includes("function scheduleRecovery()"), "editing must support automatic recovery drafts");
+assert.ok(script.includes("LOCAL_DEVICE_ONLY"), "project packages must declare their local-only boundary");
+assert.ok(script.includes("Permanently delete the locally saved project"), "saved-project deletion must require explicit confirmation");
+assert.ok(script.includes("Saved projects remain available"), "discarding an active review must not silently delete saved projects");
+assert.ok(script.includes("Unsupported project structure"), "imported projects must be validated before use");
 
 console.log("EPU founder showcase smoke checks passed.");
