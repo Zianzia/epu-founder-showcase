@@ -30,3 +30,5 @@ The executive view reads `data/founder-progress.json`, a public, read-only snaps
 The snapshot excludes manuscripts, source text, credentials, private evidence, and write authority. The browser rejects a snapshot whose schema, classification, required safety declarations, or lens structure changes. If loading fails, the dashboard falls back to its built-in public summary.
 
 Every displayed snapshot must also contain a human publication record and pass the repository validator. MOMMA may prepare or critique a draft, but cannot approve or publish it. See [Founder progress publication](docs/FOUNDER_PROGRESS_PUBLICATION.md).
+
+The default executive lens summarizes what changed since the previous public release: completed work, protection added, dependencies that remain, and the next milestone. This comparison is intentionally plain-language and inherits the same public claims boundary.
