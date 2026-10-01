@@ -86,5 +86,14 @@ assert.ok(script.includes("Enter truth and evidence"), "Paradigm lane must remai
 assert.ok(script.includes("Enter stories and lore"), "Paradox lane must remain distinct");
 assert.ok(html.includes(".gateway-fallback,#domain-panel+.grid{display:none}"), "duplicate gateway controls and shortcut cards must stay visually removed");
 assert.ok(html.includes("background:transparent;color:transparent;box-shadow:none"), "portal hit regions must not cover or distort the artwork");
+for (const id of ["wb-editor", "wb-file", "wb-domain", "wb-insights", "wb-conversation", "wb-history", "wb-compare", "wb-replacement", "wb-apply", "wb-download", "wb-download-history"]) {
+  assert.ok(html.includes(`id="${id}"`), `creative workbench is missing #${id}`);
+}
+assert.ok(script.includes("const WB="), "creative workbench state must remain explicit");
+assert.ok(script.includes("function wbCaptureSelection()"), "passage-linked revision must remain available");
+assert.ok(script.includes("function wbFacts(text)"), "fresh local MOMMA review must remain available");
+assert.ok(script.includes("HUMAN_APPLIED_REVISIONS"), "review history must distinguish human-applied changes");
+assert.ok(html.includes("full generative MOMMA conversation requires the future secure private model gateway"), "public local reasoning limit must remain visible");
+assert.ok(html.includes("Advanced evidence review and portable package"), "existing evidence workflow must remain available as an advanced layer");
 
 console.log("EPU founder showcase smoke checks passed.");
