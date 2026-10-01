@@ -23,7 +23,7 @@ assert.match(snapshot.source?.commit || "", /^[a-f0-9]{40}$/);
 assert.equal(snapshot.source?.exportMode, "MANUAL_SANITIZED_SNAPSHOT");
 assert.ok(!Number.isNaN(Date.parse(snapshot.generatedAt)), "generatedAt must be an ISO date");
 for (const boundary of requiredBoundaries) assert.ok(snapshot.claimsBoundary?.includes(boundary), `missing boundary: ${boundary}`);
-for (const lens of ["today", "protected", "unfinished", "founders"]) {
+for (const lens of ["progress", "today", "protected", "unfinished", "founders"]) {
   assert.ok(snapshot.lenses?.[lens], `missing lens: ${lens}`);
   assert.ok(Array.isArray(snapshot.lenses[lens].cards), `lens cards missing: ${lens}`);
 }
