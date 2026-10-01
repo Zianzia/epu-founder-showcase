@@ -54,7 +54,7 @@ assert.ok(script.includes("MOMMA can help. She cannot take over."), "advisory bo
 assert.ok(script.includes("Public-safe boundary present"), "public safety result must remain visible");
 assert.ok(script.includes("cannot manufacture authority"), "MOMMA cannot claim authority");
 assert.ok(script.includes("const FOUNDER_LENSES="), "founder executive lenses must remain available");
-for (const lens of ["today", "protected", "unfinished", "founders"]) {
+for (const lens of ["progress", "today", "protected", "unfinished", "founders"]) {
   assert.ok(html.includes(`data-lens="${lens}"`), `missing founder lens: ${lens}`);
 }
 assert.ok(script.includes("Absence is not treated as consent."), "founder inactivity cannot imply consent");
@@ -68,5 +68,6 @@ for (const forbidden of ["privateKey", "apiKey", "password", "sourceText", "manu
 }
 assert.ok(script.includes("snapshot safety boundary failed"), "client must fail closed on unsafe snapshots");
 assert.ok(script.includes("human publication record failed"), "client must require a human publication record");
+assert.ok(script.includes('renderLens("progress")'), "progress since last update must be the default founder view");
 
 console.log("EPU founder showcase smoke checks passed.");
